@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: 'lk-landing-page',
+  publicPath: './',
   outputDir: 'docs'
 }
