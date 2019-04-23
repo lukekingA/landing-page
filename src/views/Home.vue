@@ -3,13 +3,13 @@
     <top-header></top-header>
 
     <div class="row">
-      <div class="key-background col d-flex align-items-center justify-content-center pt-3 shadow-sm">
+      <div class="key-background col-12 d-flex align-items-center justify-content-center pt-3 shadow-sm">
         <div class="mr-2">
           <h1 class="font-weight-bold text-light text-shadow">Luke King</h1>
           <p class="text-light text-shadow">Full Stack Software Developer</p>
         </div>
         <div class="d-sm-none">
-          <img class="rounded-circle drop-shadow img-big" src="../assets/headShot.jpg" alt="Luke King Image" />
+          <img class="rounded-circle drop-shadow img-big" src="@/assets/headShot.jpg" alt="Luke King Image" />
         </div>
       </div>
       <div class="col col-sm-10 offset-sm-1">
