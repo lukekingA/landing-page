@@ -63,6 +63,7 @@
   import Inspire from '@/assets/Inspire.png'
   import BugReport from '@/assets/BugReport.png'
   import Bobs from '@/assets/Bobs.png'
+  import Slap from '@/assets/Slap.png'
   export default {
     name: 'home',
     data() {
@@ -71,10 +72,10 @@
           'Dapper', 'Bootstrap 4', 'jQuery', 'Html 5 and CSS 3', 'Scrum', 'Git'
         ],
         projects: [{
-            title: '',
-            link: '',
-            description: '',
-            background: ''
+            title: 'Slap',
+            link: 'https://lukekinga.github.io/encapsul-slap/',
+            description: 'Slap the bear game.<br/>Built with Vanilla.js',
+            background: Slap
           },
           {
             title: 'Inspire',

@@ -6,8 +6,8 @@
         <a class="text-light mr-2 txt-shadow text-decoration-none" href="#about-me">About</a>
         <a class="text-light mr-2 txt-shadow text-decoration-none" href="#projects">Projects</a>
         <a class="text-light mr-2 txt-shadow text-decoration-none" href="#contact">Contact</a>
-        <a class="text-light mr-2 txt-shadow text-decoration-none"
-          href="https://lukekinga.github.io/Luke-King-Resume/">Resume</a>
+        <a v-if="home" @click="goResume" class="text-light mr-2 txt-shadow text-decoration-none" href="#">Resume</a>
+        <a v-else @click="goHome" class="text-light mr-2 txt-shadow text-decoration-none" href="#"">Home</a>
       </div>
     </div>
 
@@ -21,8 +21,19 @@
     data() {
       return {}
     },
-    computed: {},
-    methods: {},
+    computed: {
+      home(){
+        return this.$route.name == 'home'
+      }
+    },
+    methods: {
+      goHome(){
+        this.$router.push({name:'home'})
+      },
+      goResume(){
+        this.$router.push({name:'resume'})
+      }
+    },
     components: {}
   }
 </script>

@@ -1,7 +1,9 @@
 <template>
   <div class="project">
-    <a class="border-bottom border-light text-light txt-shadow" :href="project.link">{{project.title}}</a>
-    <p><small class="text-light txt-shadow" v-html="project.description"></small></p>
+    <a class="border-bottom border-light text-light txt-shadow" :href="project.link">
+      <h3>{{project.title}}</h3>
+    </a>
+    <p class="text-white txt-shadow font-weight-bold" v-html="project.description"></p>
 
   </div>
 </template>
