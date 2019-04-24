@@ -3,10 +3,12 @@
     <div class="d-flex justify-content-between header-height bg-secondary col shadow">
       <img class="d-none m-3 d-sm-inline rounded-circle shadow-sm" src="../assets/headShot.jpg" alt="Head Shot">
       <div class="d-flex align-items-center mr-3">
-        <a class="text-light mr-2 txt-shadow text-decoration-none" href="#about-me">About</a>
-        <a class="text-light mr-2 txt-shadow text-decoration-none" href="#projects">Projects</a>
-        <a class="text-light mr-2 txt-shadow text-decoration-none" href="#contact">Contact</a>
-        <a v-if="home" @click="goResume" class="text-light mr-2 txt-shadow text-decoration-none" href="#">Resume</a>
+        <div v-if="home">
+          <a class="text-light mr-2 txt-shadow text-decoration-none" href="#about-me">About</a>
+          <a class="text-light mr-2 txt-shadow text-decoration-none" href="#projects">Projects</a>
+          <a class="text-light mr-2 txt-shadow text-decoration-none" href="#contact">Contact</a>
+          <a @click="goResume" class="text-light mr-2 txt-shadow text-decoration-none" href="#">Resume</a>
+        </div>
         <a v-else @click="goHome" class="text-light mr-2 txt-shadow text-decoration-none" href="#"">Home</a>
       </div>
     </div>
