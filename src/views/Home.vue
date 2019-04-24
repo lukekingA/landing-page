@@ -38,8 +38,11 @@
         <card id="projects">
           <h3>Projects</h3>
           <div class="row">
-            <div class="col col-sm-4">
-              <card></card>
+            <div v-for="project in projects" class="col-12 col-sm-4">
+              <card class="card-height"
+                :style="{ backgroundImage: 'url('+ project.background + ')', backgroundSize : 'cover'}">
+                <project :project="project"></project>
+              </card>
             </div>
           </div>
         </card>
@@ -54,12 +57,56 @@
   import TopHeader from '@/components/TopHeader.vue'
   import Card from '@/components/Card.vue'
   import Bottom from '@/components/Bottom.vue'
+  import Project from '@/components/Project.vue'
+  import Keepr from '@/assets/Keepr.png'
+  import KanTaskTic from '@/assets/KanTaskTic.png'
+  import Inspire from '@/assets/Inspire.png'
+  import BugReport from '@/assets/BugReport.png'
+  import Bobs from '@/assets/Bobs.png'
   export default {
     name: 'home',
     data() {
       return {
         skills: ['JavaScript', 'Vue JS', 'C# and .NET', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'MySQL',
           'Dapper', 'Bootstrap 4', 'jQuery', 'Html 5 and CSS 3', 'Scrum', 'Git'
+        ],
+        projects: [{
+            title: '',
+            link: '',
+            description: '',
+            background: ''
+          },
+          {
+            title: 'Inspire',
+            link: 'https://lukekinga.github.io/inspire/',
+            description: 'Personalized backdrop for work.<br/> Built with Vue.js.',
+            background: Inspire
+          },
+          {
+            title: 'Bug Report',
+            link: 'https://lukekinga.github.io/bug-report/',
+            description: 'A cool application to track bugs in a project.<br/> Built with Vue.js and Express.js with MongoDB.',
+            background: BugReport
+          },
+          {
+            title: 'Kantasktic',
+            link: 'https://kantasktic.herokuapp.com/',
+            description: 'Plan a project. Break it into managable pieces. Get work done.<br/> Built with Vue.js and Express.js with MongoDB.',
+            background: KanTaskTic
+          },
+          {
+            title: 'Bob\'s Burgers',
+            link: 'https://bobs-burgers-pos.herokuapp.com',
+            description: 'POS application to manage the menu and orders for small resturaunt.<br/> Built with Vue.js, Express.js and MongoDB.',
+            background: Bobs
+          },
+          {
+            title: 'Keepr',
+            link: 'https://keeperlk.herokuapp.com/',
+            description: 'Keep pictures and articles. Organize them for easy access. Share your intrests with others.<br/> Built with C# and Vue.js with a MySQL database.',
+            background: Keepr
+          }
+
         ]
       }
     },
@@ -68,13 +115,18 @@
     components: {
       TopHeader,
       Card,
-      Bottom
+      Bottom,
+      Project
     }
   }
 </script>
 
 
 <style scoped>
+  .card-height {
+    height: 25vh;
+  }
+
   .key-background {
     height: 40vh;
     background-image: linear-gradient(rgba(255, 255, 255, 0.349),
